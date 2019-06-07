@@ -8,12 +8,14 @@ struct Dual {
   T dual;
 
   T dualpart() const;
-  T realpath() const;
+  T realpart() const;
 
   Dual(const T, const T);
 
   Dual<T> &operator+=(const Dual<T> &);
-  Dual<T> &operator+(const Dual<T> &);
+  Dual<T> &operator*=(const Dual<T> &);
+  Dual<T> &operator-=(const Dual<T> &);
+  Dual<T> &operator/=(const Dual<T> &);
 };
 
 
